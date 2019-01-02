@@ -1,7 +1,7 @@
-import React from "react";
+import React, { Fragment } from "react";
 import styled from "styled-components";
 
-import banner from "./img/medical.svg";
+import banner from "./img/banner.png";
 
 const Heading = styled.div`
   margin: 0 auto;
@@ -41,26 +41,64 @@ const SubHeading = styled.div`
     display: inline-block;
     line-height: 1;
     font-family: "Futura";
+    margin: 0;
   }
 `;
 
+const Heading2 = styled.div`
+  text-align: center;
+  margin-top: 4rem;
+  h2 {
+    font-weight: normal;
+    display: inline-block;
+    line-height: 1;
+    font-family: "Rockwell";
+    font-size: 3.5rem;
+    margin: 0;
+  }
+`;
+
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+const Card = styled.div``;
+
 const Home = () => (
-  <section>
-    <Heading>
-      <h1>
-        Your True Education Partner
-        <div />
-      </h1>
-    </Heading>
-    <SubHeading>
-      <h2>
-        Take the world's most-advanced
-        <br />
-        career assessment and find your best-fit career
-      </h2>
-    </SubHeading>
-    <img src={banner} />
-  </section>
+  <Fragment>
+    <section>
+      <Heading>
+        <h1>
+          Your True Education Partner
+          <div />
+        </h1>
+      </Heading>
+      <SubHeading>
+        <h2>
+          Take the world's most-advanced
+          <br />
+          career assessment and find your best-fit career
+        </h2>
+      </SubHeading>
+      <img src={banner} style={{ width: "100%" }} />
+    </section>
+    <section>
+      <Heading2>
+        <h2>Our Programs</h2>
+      </Heading2>
+      <SubHeading>
+        <h2>Career Counselling Programs for Students</h2>
+      </SubHeading>
+      <Grid>
+        <Card>Engineering Mentor</Card>
+        <Card>Medical Mentro</Card>
+      </Grid>
+    </section>
+  </Fragment>
 );
 
 export default Home;
