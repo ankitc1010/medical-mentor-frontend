@@ -1,7 +1,15 @@
 import React, { Fragment } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+import SmallButton from "./styles/Button";
+import MentorHeading from "./styles/Heading";
 
 import banner from "./img/banner.png";
+import engineer from "./img/engineer.png";
+import doctor from "./img/doctor.png";
+import engineeringmentor from "./img/engineeringmentor.png";
+import medicalmentor from "./img/medicalmentor.png";
+import questions from "./img/questions.png";
 
 const Heading = styled.div`
   margin: 0 auto;
@@ -66,7 +74,44 @@ const Grid = styled.div`
   }
 `;
 
-const Card = styled.div``;
+const Card = styled.div`
+  margin: 1rem 2rem;
+  padding: 1rem 2rem;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(158, 158, 158, 1);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(158, 158, 158, 1);
+  box-shadow: 0px 2px 5px 0px rgba(158, 158, 158, 1);
+  > div:first-child {
+    text-align: ${props => (props.type === "engineer" ? "left" : "right")};
+  }
+  > div:nth-child(3) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2rem;
+    > h3 {
+      line-height: 1.5;
+    }
+    button {
+      margin-top: 1rem;
+    }
+    img {
+      width: 100%;
+    }
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+      img {
+        width: 50%;
+      }
+      > div {
+        grid-row-start: 1;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    margin: 0;
+    padding: 0.5rem 1rem;
+  }
+`;
 
 const Home = () => (
   <Fragment>
@@ -94,8 +139,75 @@ const Home = () => (
         <h2>Career Counselling Programs for Students</h2>
       </SubHeading>
       <Grid>
-        <Card>Engineering Mentor</Card>
-        <Card>Medical Mentro</Card>
+        <Card>
+          <div>
+            <img src={medicalmentor} width="220" />
+          </div>
+          <MentorHeading>
+            <h3>
+              <ul>
+                <li>
+                  Confused about the admissions process into good medical
+                  colleges?
+                </li>
+                <li>Looking for guidance to understand your NEET Scores?</li>
+                <li>
+                  Have doubts about your eligibility to apply for other state
+                  medical seats?
+                </li>
+              </ul>
+              <img src={questions} />
+              <div />
+            </h3>
+          </MentorHeading>
+          <div>
+            <h3>
+              We have all the answers!
+              <br />
+              Discuss your future with your Medical Mentor over a cup of coffee!
+              <br />
+              <SmallButton>Know More</SmallButton>
+            </h3>
+            <div>
+              <img src={doctor} />
+            </div>
+          </div>
+        </Card>
+        <Card type="engineer">
+          <div>
+            <img src={engineeringmentor} width="220" />
+          </div>
+          <MentorHeading type="engineer">
+            <h3>
+              <ul>
+                <li>
+                  Confused about the admissions process into good medical
+                  colleges?
+                </li>
+                <li>Looking for guidance to understand your NEET Scores?</li>
+                <li>
+                  Have doubts about your eligibility to apply for other state
+                  medical seats?
+                </li>
+              </ul>
+              <img src={questions} />
+              <div />
+            </h3>
+          </MentorHeading>
+          <div>
+            <div>
+              <img src={engineer} />
+            </div>
+            <h3>
+              We have all the answers!
+              <br />
+              Discuss your future with your Engineering Mentor over a cup of
+              coffee!
+              <br />
+              <SmallButton type="engineer">Know More</SmallButton>
+            </h3>
+          </div>
+        </Card>
       </Grid>
     </section>
   </Fragment>

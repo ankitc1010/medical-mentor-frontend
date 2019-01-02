@@ -6,6 +6,7 @@ import Meta from "./Meta";
 const theme = {
   primary: "#24527b",
   secondary: "#f1bc5d",
+  white: "#e4e2e2",
   red: "#FF0000",
   black: "#393939",
   grey: "#3A3A3A",
@@ -62,7 +63,7 @@ injectGlobal`
     padding: 0;
     margin: 0;
     font-size: 1.5rem;
-    line-height: 2;
+    line-height: 1;
     font-family: 'Rockwell';
   }
   a {
