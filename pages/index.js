@@ -1,14 +1,15 @@
-import Items from "../components/Items";
 import Head from "next/head";
 
-const Home = props => (
+import Home from "../components/Home";
+
+const HomePage = props => (
   <div>
     <Head>
       <title>Career Shapers</title>
       <meta type="description" value="Demo" />
     </Head>
-    <div />
+    <Home />
   </div>
 );
 
-export default Home;
+export default HomePage;
