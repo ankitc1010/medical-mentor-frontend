@@ -11,19 +11,16 @@ const Nav = () => (
     {({ data: { me } }) => (
       <NavStyles data-test="nav">
         <Link href="/">
-          <a>Programs </a>
+          <a>Engineering Mentor </a>
         </Link>
         <Link href="/">
-          <a>Career Library</a>
+          <a>Medical Mentor</a>
         </Link>
         <Link href="/">
-          <a>Success Story</a>
+          <a>About Us</a>
         </Link>
         <Link href="/">
           <a>Blog</a>
-        </Link>
-        <Link href="/items">
-          <a>Pricing</a>
         </Link>
         <Link href="/login">
           <a>Login</a>

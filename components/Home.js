@@ -273,4 +273,4 @@ const Home = () => (
   </Fragment>
 );
 
-export default Home;
+export { MentorHeading, Home as default };

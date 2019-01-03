@@ -1,7 +1,6 @@
 import styled, { css } from "styled-components";
 
 const MentorHeading = styled.div`
-  margin: 0 auto;
   text-align: center;
   margin-top: 4rem;
   h3 {

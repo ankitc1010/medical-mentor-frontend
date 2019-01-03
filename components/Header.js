@@ -146,22 +146,22 @@ const Header = () => (
         <input type="checkbox" id="nav-check" />
         <div className="nav-links">
           <a href="//github.io/jo_geek" target="_blank">
-            Programs
+            Medical Mentor
           </a>
           <a href="http://stackoverflow.com/users/4084003/" target="_blank">
-            Career Library
+            Engineering Mentor
           </a>
           <a
             href="https://in.linkedin.com/in/jonesvinothjoseph"
             target="_blank"
           >
-            Success Story
+            Blogs{" "}
           </a>
           <a href="https://codepen.io/jo_Geek/" target="_blank">
-            Blog
+            Contact Us
           </a>
           <a href="https://jsfiddle.net/user/jo_Geek/" target="_blank">
-            Pricing
+            About Us
           </a>
           <a href="https://jsfiddle.net/user/jo_Geek/" target="_blank">
             Login
