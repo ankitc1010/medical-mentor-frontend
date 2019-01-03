@@ -83,6 +83,9 @@ const Card = styled.div`
   box-shadow: 0px 2px 5px 0px rgba(158, 158, 158, 1);
   > div:first-child {
     text-align: ${props => (props.type === "engineer" ? "left" : "right")};
+    @media (max-width: 600px) {
+      text-align: center;
+    }
   }
   > div:nth-child(3) {
     display: grid;
@@ -109,8 +112,8 @@ const Card = styled.div`
     }
   }
   @media (max-width: 600px) {
-    margin: 0;
-    padding: 0.5rem 1rem;
+    margin: 2rem 0;
+    padding: 2rem 1rem;
   }
 `;
 
@@ -139,6 +142,10 @@ const Subscription = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: 600px) {
+      flex-direction: column;
+      margin: 1rem;
+    }
   }
   > div:nth-child(4) {
     width: 96%;

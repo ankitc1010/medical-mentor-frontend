@@ -28,6 +28,7 @@ const Dialog = styled.div`
   }
   b {
     font-size: 2rem;
+    color: ${props => props.theme.white};
   }
   position: relative;
   img {
@@ -97,7 +98,7 @@ const Socials = styled.div`
     position: absolute;
     width: 120%;
     height: 120%;
-    background: ${props => props.theme.secondary};
+    background: ${props => props.theme.teal};
     transform: rotate(45deg);
     left: -110%;
     top: 90%;
