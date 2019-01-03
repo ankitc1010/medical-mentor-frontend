@@ -4,13 +4,18 @@ import Header from "./Header";
 import Meta from "./Meta";
 
 const theme = {
-  primary: "#24527b",
-  secondary: "#f1bc5d",
-  white: "#e4e2e2",
+  primary: "#065481",
+  secondary: "#f9BD21",
+  white: "#FEFEFE",
+  teal: "#1fa7aa",
+  blue: "#68B8D9",
+  steelBlue: "#598DC1",
+  violet: "#2C6480",
+  orange: "#EB604D",
   red: "#FF0000",
-  black: "#393939",
+  black: "#4F4F4E",
   grey: "#3A3A3A",
-  lightgrey: "#E1E1E1",
+  lightgrey: "#D9DADA",
   offWhite: "#EDEDED",
   maxWidth: "1000px",
   bs: "0 12px 24px 0 rgba(0, 0, 0, 0.09)"

@@ -93,7 +93,7 @@ const NavWrapper = styled.div`
       position: absolute;
       display: block;
       width: 100%;
-      background-color: #333;
+      background-color: ${props => props.theme.black};
       height: 0px;
       transition: all 0.3s ease-in;
       overflow-y: hidden;

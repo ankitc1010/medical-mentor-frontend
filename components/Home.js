@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import styled, { css } from "styled-components";
 
+import Input from "./styles/Input";
 import SmallButton from "./styles/Button";
 import MentorHeading from "./styles/Heading";
 
@@ -94,13 +95,13 @@ const Card = styled.div`
       margin-top: 1rem;
     }
     img {
-      width: 100%;
+      width: ${props => (props.type === "engineer" ? "80%" : "100%")};
     }
 
     @media (max-width: 600px) {
       grid-template-columns: 1fr;
       img {
-        width: 50%;
+        width: ${props => (props.type === "engineer" ? "40%" : "50%")};
       }
       > div {
         grid-row-start: 1;
@@ -110,6 +111,46 @@ const Card = styled.div`
   @media (max-width: 600px) {
     margin: 0;
     padding: 0.5rem 1rem;
+  }
+`;
+
+const Subscription = styled.section`
+  text-align: center;
+  color: ${props => props.theme.white};
+  background: ${props => props.theme.primary};
+  padding: 2rem 1rem;
+  position: relative;
+  margin: 2rem 0rem;
+  font-family: "Futura";
+  h2 {
+    font-size: 3rem;
+    font-family: "Rockwell";
+    font-weight: normal;
+  }
+  > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > div {
+      padding: 1rem;
+    }
+  }
+  > div:nth-child(3) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  > div:nth-child(4) {
+    width: 96%;
+    height: 100%;
+    height: inherit;
+    border: 1px solid black;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 1rem;
+    right: -4rem;
+    transform: rotate(2deg);
   }
 `;
 
@@ -180,15 +221,11 @@ const Home = () => (
           <MentorHeading type="engineer">
             <h3>
               <ul>
+                <li>Confused about which college to enroll for?</li>
                 <li>
-                  Confused about the admissions process into good medical
-                  colleges?
+                  Want to know more about JEE, BITSAT, VITEEE, KCET and others?
                 </li>
-                <li>Looking for guidance to understand your NEET Scores?</li>
-                <li>
-                  Have doubts about your eligibility to apply for other state
-                  medical seats?
-                </li>
+                <li>Unsure about the specializations and career prospects?</li>
               </ul>
               <img src={questions} />
               <div />
@@ -210,6 +247,22 @@ const Home = () => (
         </Card>
       </Grid>
     </section>
+    <Subscription>
+      <h2>Subscribe to our Newsletter</h2>
+      <div>
+        <div>
+          <input type="radio" /> Engineering Students
+        </div>
+        <div>
+          <input type="radio" /> Medical Students
+        </div>
+      </div>
+      <div>
+        <Input placeholder="Enter Your Email" />
+        <SmallButton>Subscribe</SmallButton>
+      </div>
+      <div />
+    </Subscription>
   </Fragment>
 );
 

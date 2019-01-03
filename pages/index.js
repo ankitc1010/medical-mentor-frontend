@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import Home from "../components/Home";
+import Footer from "../components/Footer";
 
 const HomePage = props => (
   <div>
@@ -9,6 +10,7 @@ const HomePage = props => (
       <meta type="description" value="Demo" />
     </Head>
     <Home />
+    <Footer />
   </div>
 );
 
