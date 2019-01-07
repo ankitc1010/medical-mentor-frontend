@@ -168,15 +168,18 @@ const DockSeminar = styled.div`
       width: 50%;
       height: 100%;
       > img {
-        width: 45rem;
+        width: ${props => (props.type === "about" ? "35rem" : "45rem")};
         position: absolute;
-        left: 8rem;
+        left: ${props => (props.type === "about" ? "16rem" : "8rem")};
         top: 10rem;
       }
       > div {
         position: absolute;
         width: 100%;
-        left: ${props => (props.type === "mentorship" ? "-3rem" : "34rem")};
+        left: ${props =>
+          props.type === "mentorship" || props.type === "about"
+            ? "0rem"
+            : "34rem"};
         top: -4rem;
         width: 20rem;
         height: 20rem;

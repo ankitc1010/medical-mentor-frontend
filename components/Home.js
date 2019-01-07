@@ -273,4 +273,4 @@ const Home = () => (
   </Fragment>
 );
 
-export { Heading2, MentorHeading, Home as default };
+export { Heading2, SubHeading, Grid, Card, MentorHeading, Home as default };
