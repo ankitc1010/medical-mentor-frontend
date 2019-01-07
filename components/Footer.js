@@ -54,6 +54,54 @@ const Dialog = styled.div`
   }
 `;
 
+const DialogCircle = styled.div`
+  font-family: "Futura";
+  display: inline-block;
+  background: ${props =>
+    props.type === "medical" ? props.theme.secondary : props.theme.primary};
+  color: ${props =>
+    props.type === "medical" ? props.theme.primary : props.theme.white};
+  padding: 6rem 8rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  z-index: 1;
+  margin: 7rem 0rem;
+  margin-bottom: 4rem;
+  @media (max-width: 600px) {
+    padding: 4rem 4rem;
+  }
+  b {
+    font-size: 2rem;
+    color: ${props => props.theme.white};
+  }
+  position: relative;
+  img {
+    position: absolute;
+    left: -2rem;
+    width: 100%;
+    top: -8rem;
+
+    @media (max-width: 600px) {
+      visibility: hidden;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1rem;
+    z-index: -1;
+    left: 5rem;
+    width: 0;
+    height: 0;
+    border-left: 2rem solid transparent;
+    border-right: 2rem solid transparent;
+    border-top: 4rem solid
+      ${props =>
+        props.type === "medical" ? props.theme.secondary : props.theme.primary};
+  }
+`;
+
 const FooterSection = styled.footer`
   text-align: center;
   color: ${props => props.theme.white};
@@ -159,3 +207,4 @@ const Footer = () => (
 );
 
 export default Footer;
+export { DialogCircle };

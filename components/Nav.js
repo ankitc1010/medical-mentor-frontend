@@ -10,10 +10,10 @@ const Nav = () => (
   <User>
     {({ data: { me } }) => (
       <NavStyles data-test="nav">
-        <Link href="/">
+        <Link href="/engineering">
           <a>Engineering Mentor </a>
         </Link>
-        <Link href="/">
+        <Link href="/medical">
           <a>Medical Mentor</a>
         </Link>
         <Link href="/">

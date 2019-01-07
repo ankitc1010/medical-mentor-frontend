@@ -10,7 +10,6 @@ const HomePage = props => (
       <meta type="description" value="Demo" />
     </Head>
     <Home />
-    <Footer />
   </div>
 );
 

@@ -145,12 +145,12 @@ const Header = () => (
         </div>
         <input type="checkbox" id="nav-check" />
         <div className="nav-links">
-          <a href="//github.io/jo_geek" target="_blank">
+          <Link href="/medical" prefetch>
             Medical Mentor
-          </a>
-          <a href="http://stackoverflow.com/users/4084003/" target="_blank">
+          </Link>
+          <Link href="/engineering" prefetch>
             Engineering Mentor
-          </a>
+          </Link>
           <a
             href="https://in.linkedin.com/in/jonesvinothjoseph"
             target="_blank"

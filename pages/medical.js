@@ -7,7 +7,6 @@ import Footer from "../components/Footer";
 const MedicalPage = () => (
   <div>
     <Medical />
-    <Footer />
   </div>
 );
 
