@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start -p $PORT",
     "now-start": "next start -p $PORT",
+    "export": "next build && next export",
     "now-build": "next build",
     "test": "NODE_ENV=test jest --watch",
     "heroku-postbuild": "next build"
