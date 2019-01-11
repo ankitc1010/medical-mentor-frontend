@@ -155,7 +155,6 @@ const Header = () => (
           <Link href="/about" prefetch>
             About Us
           </Link>
-
           <a>
             <Input type="text" />
             <SmallButton>Start Now for Free</SmallButton>
