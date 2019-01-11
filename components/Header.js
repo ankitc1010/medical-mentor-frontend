@@ -151,21 +151,11 @@ const Header = () => (
           <Link href="/engineering" prefetch>
             Engineering Mentor
           </Link>
-          <a
-            href="https://in.linkedin.com/in/jonesvinothjoseph"
-            target="_blank"
-          >
-            Blogs{" "}
-          </a>
-          <a href="https://codepen.io/jo_Geek/" target="_blank">
-            Contact Us
-          </a>
-          <a href="https://jsfiddle.net/user/jo_Geek/" target="_blank">
+
+          <Link href="/about" prefetch>
             About Us
-          </a>
-          <a href="https://jsfiddle.net/user/jo_Geek/" target="_blank">
-            Login
-          </a>
+          </Link>
+
           <a>
             <Input type="text" />
             <SmallButton>Start Now for Free</SmallButton>
