@@ -185,19 +185,19 @@ const Footer = () => (
     <div>
       <img src={whiteLogo} />
       <Socials>
-        <a class="btn" href="#">
+        <a className="btn" href="#">
           <FaFacebookF />
         </a>
-        <a class="btn" href="#">
+        <a className="btn" href="#">
           <FaTwitter />
         </a>
-        <a class="btn" href="#">
+        <a className="btn" href="#">
           <FaGoogle />
         </a>
-        <a class="btn" href="#">
+        <a className="btn" href="#">
           <FaInstagram />
         </a>
-        <a class="btn" href="#">
+        <a className="btn" href="#">
           <FaYoutube />
         </a>
       </Socials>

@@ -3,6 +3,8 @@ import styled from "styled-components";
 import NProgress from "nprogress";
 import Router from "next/router";
 
+import User from "./User";
+
 import SmallButton from "./styles/Button";
 import Input from "./styles/Input";
 
@@ -155,6 +157,7 @@ const Header = () => (
           <Link href="/about" prefetch>
             About Us
           </Link>
+          <User>{me => me && <div>{JSON.stringify(me.data)}</div>}</User>
           <a>
             <Input type="text" />
             <SmallButton>Start Now for Free</SmallButton>
