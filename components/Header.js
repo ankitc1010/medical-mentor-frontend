@@ -157,7 +157,7 @@ const Header = () => (
           <Link href="/about" prefetch>
             About Us
           </Link>
-          <User>{me => me && <div>{JSON.stringify(me.data)}</div>}</User>
+          <User>{me => me.data && <div>{JSON.stringify(me.data)}</div>}</User>
           <a>
             <Input type="text" />
             <SmallButton>Start Now for Free</SmallButton>
