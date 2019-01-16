@@ -1,4 +1,4 @@
 // This is client side config only - don't put anything in here that shouldn't be public!
 export const endpoint = `http://localhost:4444`;
-export const prodEndpoint = `https://hidden-waters-40385.herokuapp.com`;
+export const prodEndpoint = `https://www.mycareershapers.in`;
 export const perPage = 4;
