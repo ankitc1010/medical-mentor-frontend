@@ -4,14 +4,16 @@ import NProgress from "nprogress";
 import Router from "next/router";
 
 import User from "./User";
+import Registration from "./RegistrationPopUp";
 
 import SmallButton from "./styles/Button";
 import Input from "./styles/Input";
+import SignOut from "./Signout";
 
 import logo from "./img/logo.png";
 
 const NavWrapper = styled.div`
-  > div {
+  > div:first-child {
     max-width: 120rem;
     margin: 0 auto;
   }
@@ -157,7 +159,15 @@ const Header = () => (
           <Link href="/about" prefetch>
             About Us
           </Link>
-          <User>{me => me.data && <div>{JSON.stringify(me.data)}</div>}</User>
+          <User>
+            {me =>
+              me.data.me ? (
+                <SignOut />
+              ) : (
+                <a onClick={() => (location.hash = "signin-popup")}>Register</a>
+              )
+            }
+          </User>
           <a>
             <Input type="text" />
             <SmallButton>Start Now for Free</SmallButton>
@@ -165,6 +175,7 @@ const Header = () => (
         </div>
       </div>
     </div>
+    <Registration />
   </NavWrapper>
 );
 
