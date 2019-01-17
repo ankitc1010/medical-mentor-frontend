@@ -1,3 +1,4 @@
+import React, { Component, Fragment } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import NProgress from "nprogress";
@@ -54,6 +55,7 @@ const NavWrapper = styled.div`
     padding: 13px 10px 13px 10px;
     text-decoration: none;
     font-size: 1.5rem;
+    cursor: pointer;
     font-weight: 400 !important;
   }
 
@@ -75,6 +77,7 @@ const NavWrapper = styled.div`
     }
     .nav > .nav-header > .nav-title > img {
       height: 3rem;
+      cursor: pointer;
     }
     .nav > .nav-btn > label {
       display: inline-block;
@@ -131,52 +134,73 @@ Router.onRouteChangeError = () => {
   NProgress.done();
 };
 
-const Header = () => (
-  <NavWrapper>
-    <div>
-      <div className="nav">
-        <div className="nav-header">
-          <div className="nav-title">
-            <img src={logo} />
+class Header extends Component {
+  state = {
+    open: false
+  };
+  handleToggle = () => {
+    const { open } = this.state;
+    this.setState({
+      open: !open
+    });
+  };
+  render() {
+    const { open } = this.state;
+    return (
+      <NavWrapper>
+        <div>
+          <div className="nav">
+            <div className="nav-header">
+              <div className="nav-title">
+                <Link href="/" prefetch>
+                  <img src={logo} />
+                </Link>
+              </div>
+            </div>
+            <div className="nav-btn" onClick={this.handleToggle}>
+              <label htmlFor="nav-check">
+                <span />
+                <span />
+                <span />
+              </label>
+            </div>
+            <input type="checkbox" id="nav-check" checked={open} />
+            <div className="nav-links">
+              <Link href="/medical" prefetch>
+                <a onClick={this.handleToggle}>Medical Mentor</a>
+              </Link>
+              <Link href="/engineering" prefetch>
+                <a onClick={this.handleToggle}>Engineering Mentor</a>
+              </Link>
+
+              <Link href="/about" prefetch>
+                <a onClick={this.handleToggle}>About Us</a>
+              </Link>
+              <User>
+                {me =>
+                  me.data.me ? (
+                    <Fragment>
+                      <SignOut />
+                      <Link href="/me" prefetch>
+                        <SmallButton onClick={this.handleToggle}>
+                          Profile
+                        </SmallButton>
+                      </Link>
+                    </Fragment>
+                  ) : (
+                    <a onClick={() => (location.hash = "signin-popup")}>
+                      <SmallButton>Register/Sign In</SmallButton>
+                    </a>
+                  )
+                }
+              </User>
+            </div>
           </div>
         </div>
-        <div className="nav-btn">
-          <label htmlFor="nav-check">
-            <span />
-            <span />
-            <span />
-          </label>
-        </div>
-        <input type="checkbox" id="nav-check" />
-        <div className="nav-links">
-          <Link href="/medical" prefetch>
-            Medical Mentor
-          </Link>
-          <Link href="/engineering" prefetch>
-            Engineering Mentor
-          </Link>
-
-          <Link href="/about" prefetch>
-            About Us
-          </Link>
-          <User>
-            {me =>
-              me.data.me ? (
-                <SignOut />
-              ) : (
-                <a onClick={() => (location.hash = "signin-popup")}>Register</a>
-              )
-            }
-          </User>
-          <a>
-            <Input type="text" />
-            <SmallButton>Start Now for Free</SmallButton>
-          </a>
-        </div>
-      </div>
-    </div>
-    <Registration />
-  </NavWrapper>
-);
+        <Registration />
+      </NavWrapper>
+    );
+  }
+}
 
 export default Header;

@@ -52,7 +52,7 @@ const PopUpDialog = styled.div`
     @media (max-width: 480px) {
       & {
         width: 99%;
-        height: 73%;
+        height: 95%;
         border-radius: 0;
       }
     }
