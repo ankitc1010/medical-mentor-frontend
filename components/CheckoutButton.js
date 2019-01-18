@@ -27,10 +27,7 @@ class CheckoutButton extends Component {
     const amount = calculatePrice(product.price);
     const self = this;
     const options = {
-      key:
-        process.env.NODE_ENV === "production"
-          ? process.env.RAZOR_PAY_KEY
-          : "rzp_test_6JG1xgZpLNa1jx",
+      key: "rzp_test_6JG1xgZpLNa1jx",
       amount: amount,
       name: product.name,
       description: product.description,
