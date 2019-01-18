@@ -1,20 +1,20 @@
-import React, { Component } from 'react';
-import { Mutation } from 'react-apollo';
-import gql from 'graphql-tag';
-import Router from 'next/router';
-import Form from './styles/Form';
-import formatMoney from '../lib/formatMoney';
-import Error from './ErrorMessage';
+import React, { Component } from "react";
+import { Mutation } from "react-apollo";
+import gql from "graphql-tag";
+import Router from "next/router";
+import Form from "./styles/Form";
+import formatMoney from "../lib/formatMoney";
+import Error from "./ErrorMessage";
 
-const CREATE_ITEM_MUTATION = gql`
-  mutation CREATE_ITEM_MUTATION(
+const CREATE_PRODUCT_MUTATION = gql`
+  mutation CREATE_PRODUCT_MUTATION(
     $title: String!
     $description: String!
     $price: Int!
     $image: String
     $largeImage: String
   ) {
-    createItem(
+    createProduct(
       title: $title
       description: $description
       price: $price
@@ -28,37 +28,40 @@ const CREATE_ITEM_MUTATION = gql`
 
 class CreateItem extends Component {
   state = {
-    title: '',
-    description: '',
-    image: '',
-    largeImage: '',
-    price: 0,
+    title: "",
+    description: "",
+    image: "",
+    largeImage: "",
+    price: 0
   };
   handleChange = e => {
     const { name, type, value } = e.target;
-    const val = type === 'number' ? parseFloat(value) : value;
+    const val = type === "number" ? parseFloat(value) : value;
     this.setState({ [name]: val });
   };
 
   uploadFile = async e => {
     const files = e.target.files;
     const data = new FormData();
-    data.append('file', files[0]);
-    data.append('upload_preset', 'sickfits');
+    data.append("file", files[0]);
+    data.append("upload_preset", "sickfits");
 
-    const res = await fetch('https://api.cloudinary.com/v1_1/wesbostutorial/image/upload', {
-      method: 'POST',
-      body: data,
-    });
+    const res = await fetch(
+      "https://api.cloudinary.com/v1_1/wesbostutorial/image/upload",
+      {
+        method: "POST",
+        body: data
+      }
+    );
     const file = await res.json();
     this.setState({
       image: file.secure_url,
-      largeImage: file.eager[0].secure_url,
+      largeImage: file.eager[0].secure_url
     });
   };
   render() {
     return (
-      <Mutation mutation={CREATE_ITEM_MUTATION} variables={this.state}>
+      <Mutation mutation={CREATE_PRODUCT_MUTATION} variables={this.state}>
         {(createItem, { loading, error }) => (
           <Form
             data-test="form"
@@ -70,8 +73,8 @@ class CreateItem extends Component {
               // change them to the single item page
               console.log(res);
               Router.push({
-                pathname: '/item',
-                query: { id: res.data.createItem.id },
+                pathname: "/item",
+                query: { id: res.data.createItem.id }
               });
             }}
           >
@@ -88,7 +91,11 @@ class CreateItem extends Component {
                   onChange={this.uploadFile}
                 />
                 {this.state.image && (
-                  <img width="200" src={this.state.image} alt="Upload Preview" />
+                  <img
+                    width="200"
+                    src={this.state.image}
+                    alt="Upload Preview"
+                  />
                 )}
               </label>
 
@@ -139,4 +146,4 @@ class CreateItem extends Component {
 }
 
 export default CreateItem;
-export { CREATE_ITEM_MUTATION };
+export { CREATE_PRODUCT_MUTATION };

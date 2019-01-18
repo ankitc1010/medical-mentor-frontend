@@ -12,6 +12,13 @@ const CURRENT_USER_QUERY = gql`
       permissions
       orders {
         id
+        amount
+        product {
+          title
+          description
+          image
+          largeImage
+        }
       }
     }
   }
