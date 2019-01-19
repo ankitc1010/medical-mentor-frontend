@@ -2,6 +2,8 @@ import React, { Fragment } from "react";
 import styled, { css } from "styled-components";
 import Link from "next/link";
 
+import Testimonials from "./Testimonials";
+
 import Input from "./styles/Input";
 import SmallButton from "./styles/Button";
 import MentorHeading from "./styles/Heading";
