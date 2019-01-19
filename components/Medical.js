@@ -287,10 +287,10 @@ const GridSection = styled.div`
       margin: 1rem 0.5rem;
     }
     > img {
-      width: 5rem;
+      width: 5rem !important;
       height: 5rem;
       @media (max-width: 600px) {
-        width: 3rem;
+        width: 3rem !important;
         height: 3rem;
       }
     }

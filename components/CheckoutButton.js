@@ -4,6 +4,7 @@ import NProgress from "nprogress";
 import Router from "next/router";
 import gql from "graphql-tag";
 
+import { CURRENT_USER_QUERY } from "./User";
 import Error from "./ErrorMessage";
 
 import calculatePrice from "../lib/calcTotalPrice";
@@ -70,7 +71,10 @@ class CheckoutButton extends Component {
   render() {
     console.log(this.props);
     return (
-      <Mutation mutation={CREATE_ORDER_MUTATION}>
+      <Mutation
+        mutation={CREATE_ORDER_MUTATION}
+        refetchQueries={[{ query: CURRENT_USER_QUERY }]}
+      >
         {(createOrder, { error, loading }) => {
           if (error) return <Error error={error} />;
           if (loading) return <div>Loading</div>;

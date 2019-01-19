@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import styled, { css } from "styled-components";
+import Link from "next/link";
 
 import Input from "./styles/Input";
 import SmallButton from "./styles/Button";
@@ -93,6 +94,7 @@ const Card = styled.div`
     margin-top: 2rem;
     > h3 {
       line-height: 1.5;
+      font-family: "Futura";
     }
     button {
       margin-top: 1rem;
@@ -214,7 +216,9 @@ const Home = () => (
               <br />
               Discuss your future with your Medical Mentor over a cup of coffee!
               <br />
-              <SmallButton>Know More</SmallButton>
+              <Link href="/medical" prefetch>
+                <SmallButton>Know More</SmallButton>
+              </Link>
             </h3>
             <div>
               <img src={doctor} />
@@ -248,10 +252,20 @@ const Home = () => (
               Discuss your future with your Engineering Mentor over a cup of
               coffee!
               <br />
-              <SmallButton type="engineer">Know More</SmallButton>
+              <Link href="/engineering" prefetch>
+                <SmallButton type="engineer">Know More</SmallButton>
+              </Link>
             </h3>
           </div>
         </Card>
+        <div>
+          <h3>Engineering Psychometric Test</h3>
+          <p>Give the test, give the test be a hero</p>
+        </div>
+        <div>
+          <h3>Medical Test Series</h3>
+          <p>Give the test, give the test be a hero</p>
+        </div>
       </Grid>
     </section>
     <Subscription>

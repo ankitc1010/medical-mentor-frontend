@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 import {
   Header,
@@ -12,7 +13,7 @@ import {
   PricingGrid
 } from "./Medical";
 import { DialogCircle } from "./Footer";
-import { Heading2, MentorHeading, SubHeading, Grid, Card } from "./Home";
+import { Heading2, MentorHeading, SubHeading, Card, Grid } from "./Home";
 
 import SmallButton from "./styles/Button";
 
@@ -28,6 +29,65 @@ import engineering1 from "./img/engineering/engineering1.png";
 import engineering2 from "./img/engineering/engineering2.png";
 import engineering3 from "./img/engineering/engineering3.png";
 import engineering4 from "./img/engineering/engineering4.png";
+
+import vikram from "./img/team/Vikram.jpg";
+import mahipal from "./img/team/Mahipal.jpg";
+import ratan from "./img/team/Ratan.jpg";
+import sripal from "./img/team/Sripal.jpg";
+import jignesh from "./img/team/Jignesh.jpg";
+
+const GridTeam = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 100rem;
+  margin: 0 auto;
+  margin-top: 4rem;
+  @media (max-width: 600px) {
+    margin-top: 2rem;
+    grid-template-columns: 1fr;
+  }
+  > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    img {
+      width: 12rem;
+      height: 12rem;
+      border-radius: 50%;
+      transition: 0.2s;
+      @media (max-width: 480px) {
+        width: 8rem;
+        height: 8rem;
+      }
+    }
+    img:hover {
+      transform: scale(1.25, 1.25);
+    }
+    > div {
+      margin-left: 2rem;
+      h3 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        @media (max-width: 480px) {
+          font-size: 2rem;
+          margin-bottom: 0.5rem;
+        }
+      }
+      p {
+        @media (max-width: 480px) {
+          margin-top: 0.5rem;
+        }
+      }
+    }
+  }
+  .ratan {
+    position: relative;
+    @media (min-width: 790px) {
+      left: 2rem;
+    }
+  }
+`;
 
 const AboutUs = () => (
   <div>
@@ -197,6 +257,48 @@ const AboutUs = () => (
           </div>
         </Card>
       </Grid>
+    </section>
+    <section>
+      <Heading2>
+        <h2>Career Shapers Team</h2>
+      </Heading2>
+      <GridTeam>
+        <div>
+          <img src={vikram} />
+          <div>
+            <h3>Vikram Kumar</h3>
+            <p>Founder & CEO</p>
+          </div>
+        </div>
+        <div>
+          <img src={jignesh} />
+          <div>
+            <h3>Jignesh Kumar</h3>
+            <p>Director</p>
+          </div>
+        </div>
+        <div>
+          <img src={mahipal} />
+          <div>
+            <h3>Mahipal Jain</h3>
+            <p>Board Advisor</p>
+          </div>
+        </div>
+        <div>
+          <img src={sripal} />
+          <div>
+            <h3>CA Sripal Jain</h3>
+            <p>Board Advisor</p>
+          </div>
+        </div>
+        <div className="ratan">
+          <img src={ratan} />
+          <div>
+            <h3>Dr Ratan Salecha</h3>
+            <p>Board Advisor</p>
+          </div>
+        </div>
+      </GridTeam>
     </section>
   </div>
 );
