@@ -35,11 +35,12 @@ class NeetHelp extends Component {
     e.preventDefault();
     createNeetHelp({
       variables: {
-        data: {
-          ...this.state
-        }
+        ...this.state
       }
     });
+  };
+  saveToState = e => {
+    this.setState({ [e.target.name]: e.target.value });
   };
   render() {
     return (
