@@ -60,20 +60,16 @@ const Form = styled.form`
   }
   button,
   input[type="submit"] {
-    width: auto;
-    background: red;
-    color: white;
-    border: 0;
-    font-size: 2rem;
-    border-radius: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: inherit;
-    box-shadow: 0 3px 15px 0 rgba(247, 123, 155, 0.71);
-    font-weight: 700;
-    float: right;
-    padding: 0.5rem 1.2rem;
+    font-size: 1.5rem;
+    font-weight: normal;
+    font-family: "Rockwell";
+    cursor: pointer;
+    padding: 0.8rem 2rem;
+    background: ${props =>
+      props.type === "engineer" ? props.theme.primary : props.theme.secondary};
+    padding-top: 1.4rem;
+    color: ${props =>
+      props.type === "engineer" ? props.theme.white : props.theme.primary};
   }
   fieldset {
     border: 0;

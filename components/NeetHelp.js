@@ -1,8 +1,24 @@
 import React, { Component } from "react";
+import styled from "styled-components";
 import Head from "next/head";
 import { Mutation } from "react-apollo";
 import gql from "graphql-tag";
 import Form from "./styles/Form";
+
+import { MentorHeading, Heading } from "./Home";
+
+import neethelp from "./img/neethelp.jpg";
+import questions from "./img/questions.png";
+
+const NeetHelpSection = styled.section`
+  max-width: 70rem;
+  margin: 0 auto;
+  > img {
+    width: 100%;
+    margin: 2rem 0;
+    border: 1px solid grey;
+  }
+`;
 
 const CREATE_NEET_HELP_MUTATION = gql`
   mutation CREATE_NEET_HELP_MUTATION(
@@ -45,20 +61,38 @@ class NeetHelp extends Component {
   };
   render() {
     return (
-      <div>
+      <NeetHelpSection>
+        <Heading>
+          <h1>
+            NEET Application Correction
+            <div />
+          </h1>
+        </Heading>
+        <img src={neethelp} />
+        <MentorHeading type="medical">
+          <h3>
+            <ul>
+              <li>Doubt in NEET application correction?</li>
+              <li>Don't know what Qualifying Examination coe to put?</li>
+              <li>Not sure about state of domicile for AIQ 15% seats?</li>
+            </ul>
+            <img src={questions} />
+            <div />
+          </h3>
+        </MentorHeading>
         <Mutation mutation={CREATE_NEET_HELP_MUTATION}>
           {(createNeetHelp, { error, loading }) => {
             return (
               <Form onSubmit={e => this.handleSubmit(e, createNeetHelp)}>
                 <Head>
-                  <title>NEET Help | Career Shapers</title>
+                  <title>NEET Application Correction | Career Shapers</title>
                   <meta
                     name="description"
                     content="Assiting you in making your NEET aspirations, possible."
                   />
                 </Head>
                 <fieldset>
-                  <h2>NEET HELP FORM</h2>
+                  <h2>Contact Form</h2>
                   <p>
                     If you are facing problems with the NEET process, we are
                     there to help you
@@ -114,7 +148,7 @@ class NeetHelp extends Component {
             );
           }}
         </Mutation>
-      </div>
+      </NeetHelpSection>
     );
   }
 }
