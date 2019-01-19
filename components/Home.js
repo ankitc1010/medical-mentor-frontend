@@ -13,6 +13,9 @@ import engineeringmentor from "./img/engineeringmentor.png";
 import medicalmentor from "./img/medicalmentor.png";
 import questions from "./img/questions.png";
 
+import psychometric from "./img/psychometric.png";
+import testseries from "./img/testseries.png";
+
 const Heading = styled.div`
   margin: 0 auto;
   text-align: center;
@@ -82,6 +85,27 @@ const Card = styled.div`
   -webkit-box-shadow: 0px 2px 5px 0px rgba(158, 158, 158, 1);
   -moz-box-shadow: 0px 2px 5px 0px rgba(158, 158, 158, 1);
   box-shadow: 0px 2px 5px 0px rgba(158, 158, 158, 1);
+  > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 5rem;
+      height: 5rem;
+    }
+    h3 {
+      font-weight: normal;
+      font-size: 2rem;
+    }
+  }
+  p {
+    font-family: "Futura";
+    text-align: left;
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-top: 2rem;
+  }
   > div:first-child {
     text-align: ${props => (props.type === "engineer" ? "left" : "right")};
     @media (max-width: 600px) {
@@ -258,14 +282,50 @@ const Home = () => (
             </h3>
           </div>
         </Card>
-        <div>
-          <h3>Engineering Psychometric Test</h3>
-          <p>Give the test, give the test be a hero</p>
-        </div>
-        <div>
-          <h3>Medical Test Series</h3>
-          <p>Give the test, give the test be a hero</p>
-        </div>
+        <Card>
+          <span>
+            <img src={testseries} />
+            <h3>Medical Test Series</h3>
+          </span>
+          <MentorHeading type="medical">
+            <h3>
+              <ul>
+                <li>Unsure what is the status of your preparation?</li>
+                <li>
+                  Not confident that will you be able to crack the examination?
+                </li>
+              </ul>
+              <img src={questions} />
+              <div />
+            </h3>
+          </MentorHeading>
+          <p>
+            Well fret not, as these tests will help you self-evaluate and give
+            you comparative analysis with toppers and other peers.
+          </p>
+        </Card>
+        <Card>
+          <span>
+            <img src={psychometric} />
+            <h3>Engineering Psychometric Test</h3>
+          </span>
+          <MentorHeading type="engineer">
+            <h3>
+              <ul>
+                <li>
+                  Confused what branch to opt for in your Engineering Career?
+                </li>
+                <li>Worried that you will pick a wrong stream?</li>
+              </ul>
+              <img src={questions} />
+              <div />
+            </h3>
+          </MentorHeading>
+          <p>
+            We have the answer, just give this test and know what stream you
+            should opt for.
+          </p>
+        </Card>
       </Grid>
     </section>
     <Subscription>
