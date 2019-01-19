@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Head from "next/head";
 import { Mutation } from "react-apollo";
 import gql from "graphql-tag";
 import Form from "./styles/Form";
@@ -49,6 +50,13 @@ class NeetHelp extends Component {
           {(createNeetHelp, { error, loading }) => {
             return (
               <Form onSubmit={e => this.handleSubmit(e, createNeetHelp)}>
+                <Head>
+                  <title>NEET Help | Career Shapers</title>
+                  <meta
+                    name="description"
+                    content="Assiting you in making your NEET aspirations, possible."
+                  />
+                </Head>
                 <fieldset>
                   <h2>NEET HELP FORM</h2>
                   <p>
