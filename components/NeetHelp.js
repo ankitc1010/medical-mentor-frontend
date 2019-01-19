@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import { ToastContainer, toast } from "react-toastify";
 import Head from "next/head";
 import { Mutation } from "react-apollo";
 import gql from "graphql-tag";
 import Form from "./styles/Form";
+
+import "react-toastify/dist/ReactToastify.css";
 
 import { MentorHeading, Heading } from "./Home";
 
@@ -50,11 +53,28 @@ class NeetHelp extends Component {
   };
   handleSubmit = async (e, createNeetHelp) => {
     e.preventDefault();
-    createNeetHelp({
-      variables: {
-        ...this.state
-      }
-    });
+    try {
+      const res = await createNeetHelp({
+        variables: {
+          ...this.state
+        }
+      });
+      this.setState({
+        name: "",
+        email: "",
+        phonenumber: "",
+        info: ""
+      });
+      toast.success("Success! Your form submitted.");
+    } catch (e) {
+      this.setState({
+        name: "",
+        email: "",
+        phonenumber: "",
+        info: ""
+      });
+      toast.success("Success! Your form is already submitted.");
+    }
   };
   saveToState = e => {
     this.setState({ [e.target.name]: e.target.value });
@@ -73,7 +93,7 @@ class NeetHelp extends Component {
           <h3>
             <ul>
               <li>Doubt in NEET application correction?</li>
-              <li>Don't know what Qualifying Examination coe to put?</li>
+              <li>Don't know what Qualifying Examination code to put?</li>
               <li>Not sure about state of domicile for AIQ 15% seats?</li>
             </ul>
             <img src={questions} />
@@ -91,7 +111,7 @@ class NeetHelp extends Component {
                     content="Assiting you in making your NEET aspirations, possible."
                   />
                 </Head>
-                <fieldset>
+                <fieldset disabled={loading} aria-busy={loading}>
                   <h2>Contact Form</h2>
                   <p>
                     If you are facing problems with the NEET process, we are
@@ -142,12 +162,15 @@ class NeetHelp extends Component {
                     />
                   </label>
 
-                  <button type="submit">Contact Me, Now!</button>
+                  <button type="submit">
+                    {loading ? "Submitting!" : "Contact Me, Now!"}
+                  </button>
                 </fieldset>
               </Form>
             );
           }}
         </Mutation>
+        <ToastContainer />
       </NeetHelpSection>
     );
   }
