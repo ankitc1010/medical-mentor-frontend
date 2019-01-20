@@ -55,7 +55,8 @@ const SubHeading = styled.div`
     font-weight: normal;
     display: inline-block;
     line-height: 1;
-    font-family: "Futura";
+    font-size: 2rem !important;
+    font-family: "Futura" !important;
     margin: 0;
   }
 `;
@@ -147,8 +148,10 @@ const Card = styled.div`
 
 const Subscription = styled.section`
   text-align: center;
-  color: ${props => props.theme.white};
-  background: ${props => props.theme.primary};
+  color: ${props =>
+    props.type === "engineer" ? props.theme.black : props.theme.white};
+  background: ${props =>
+    props.type === "engineer" ? props.theme.secondary : props.theme.primary};
   padding: 2rem 1rem;
   position: relative;
   margin: 2rem 0rem;
@@ -175,7 +178,7 @@ const Subscription = styled.section`
       margin: 1rem;
     }
   }
-  > div:nth-child(4) {
+  > div:last-child {
     width: 96%;
     height: 100%;
     height: inherit;
@@ -186,6 +189,7 @@ const Subscription = styled.section`
     left: 1rem;
     right: -4rem;
     transform: rotate(2deg);
+    pointer-events: none;
   }
 `;
 
@@ -344,6 +348,16 @@ const Home = () => (
         <Input placeholder="Enter Your Email" />
         <SmallButton>Subscribe</SmallButton>
       </div>
+      <div />
+    </Subscription>
+    <Subscription type="engineer">
+      <Heading2>
+        <h2>Testimonials</h2>
+      </Heading2>
+      <SubHeading>
+        <h2>Here what our customers have to say about us.</h2>
+      </SubHeading>
+      <Testimonials />
       <div />
     </Subscription>
   </Fragment>
