@@ -291,31 +291,6 @@ const Home = () => (
         </Card>
         <Card>
           <span>
-            <img src={testseries} />
-            <h3>Medical Test Series</h3>
-          </span>
-          <MentorHeading type="medical">
-            <h3>
-              <ul>
-                <li>Unsure what is the status of your preparation?</li>
-                <li>
-                  Not confident that will you be able to crack the examination?
-                </li>
-              </ul>
-              <img src={questions} />
-              <div />
-            </h3>
-          </MentorHeading>
-          <p>
-            Well fret not, as these tests will help you self-evaluate and give
-            you comparative analysis with toppers and other peers.
-          </p>
-          <p>
-            <BuyNow id="cjr4o0dad001z0874ml2be1f4" />
-          </p>
-        </Card>
-        <Card>
-          <span>
             <img src={psychometric} />
             <h3>Engineering Psychometric Test</h3>
           </span>

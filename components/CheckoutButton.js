@@ -33,7 +33,7 @@ class CheckoutButton extends Component {
       key: "rzp_test_6JG1xgZpLNa1jx",
       amount: amount,
       name: product.name,
-      description: product.description,
+      description: "Payment",
 
       async handler(response) {
         const paymentId = response.razorpay_payment_id;
