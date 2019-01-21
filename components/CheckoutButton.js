@@ -9,6 +9,8 @@ import Error from "./ErrorMessage";
 
 import calculatePrice from "../lib/calcTotalPrice";
 
+import Button from "./styles/Button";
+
 const CREATE_ORDER_MUTATION = gql`
   mutation CREATE_ORDER_MUTATION($id: String!, $paymentId: String!) {
     createOrder(id: $id, paymentId: $paymentId) {
@@ -76,11 +78,14 @@ class CheckoutButton extends Component {
         refetchQueries={[{ query: CURRENT_USER_QUERY }]}
       >
         {(createOrder, { error, loading }) => {
-          if (error) return <Error error={error} />;
+          if (error) {
+            console.log(error);
+            return <Error error={error} />;
+          }
           if (loading) return <div>Loading</div>;
           return (
             <div onClick={e => this.handlePayments(e, createOrder)}>
-              Checkout
+              <Button>Checkout</Button>
             </div>
           );
         }}

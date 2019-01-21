@@ -14,6 +14,7 @@ import {
 
 import { Heading2, MentorHeading } from "./Home";
 import { DialogCircle } from "./Footer";
+import BuyNow from "./BuyNow";
 import questions from "./img/questions.png";
 
 import logo from "./img/engineeringmentor.png";
@@ -293,7 +294,7 @@ const Engineering = () => (
             <div>SILVER</div>
             <h4>&#8377;4,991/-</h4>
             <div>One time payment</div>
-            <a>Buy Now</a>
+            <BuyNow id="cjr4nr8gp000v0874wot9hqtz" />
           </div>
           <div>
             <h5>It includes</h5>
@@ -430,7 +431,7 @@ const Engineering = () => (
             <div>GOLD</div>
             <h4>&#8377;11,993/-</h4>
             <div>One time payment</div>
-            <a>Buy Now</a>
+            <BuyNow id="cjr4nt1v2001b087470gukbpp" />
           </div>
           <div>
             <h5>It includes everything in the silver pack +</h5>

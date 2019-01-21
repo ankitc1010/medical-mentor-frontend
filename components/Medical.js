@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import { Heading2, MentorHeading } from "./Home";
 import { DialogCircle } from "./Footer";
+import BuyNow from "./BuyNow";
 import questions from "./img/questions.png";
 
 import logo from "./img/medicalmentor.png";
@@ -654,7 +655,7 @@ class Medical extends Component {
                 <div>SILVER</div>
                 <h4>&#8377;15,980/-</h4>
                 <div>One time payment</div>
-                <a>Buy Now</a>
+                <BuyNow id="cjr1529ag000d0809pudrlp0q" />
               </div>
               <div>
                 <h5>It includes</h5>
@@ -828,7 +829,7 @@ class Medical extends Component {
                 <div>GOLD</div>
                 <h4>&#8377;24,980/-</h4>
                 <div>One time payment</div>
-                <a>Buy Now</a>
+                <BuyNow id="cjr4nuh4o001j0874px5l9mkb" />
               </div>
               <div>
                 <h5>It includes everything in the silver pack +</h5>

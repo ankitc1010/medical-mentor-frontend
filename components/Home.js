@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 import Link from "next/link";
 
 import Testimonials from "./Testimonials";
+import BuyNow from "./BuyNow";
 
 import Input from "./styles/Input";
 import SmallButton from "./styles/Button";
@@ -309,6 +310,9 @@ const Home = () => (
             Well fret not, as these tests will help you self-evaluate and give
             you comparative analysis with toppers and other peers.
           </p>
+          <p>
+            <BuyNow id="cjr4o0dad001z0874ml2be1f4" />
+          </p>
         </Card>
         <Card>
           <span>
@@ -330,6 +334,9 @@ const Home = () => (
           <p>
             We have the answer, just give this test and know what stream you
             should opt for.
+          </p>
+          <p>
+            <BuyNow id="cjr4nz6y5001r0874qf5e9bbv" type="engineer" />
           </p>
         </Card>
       </Grid>
