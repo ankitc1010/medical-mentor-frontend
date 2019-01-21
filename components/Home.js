@@ -4,6 +4,7 @@ import Link from "next/link";
 
 import Testimonials from "./Testimonials";
 import BuyNow from "./BuyNow";
+import SubscriptionComponent from "./Subscription";
 
 import Input from "./styles/Input";
 import SmallButton from "./styles/Button";
@@ -316,22 +317,7 @@ const Home = () => (
         </Card>
       </Grid>
     </section>
-    <Subscription>
-      <h2>Subscribe to our Newsletter</h2>
-      <div>
-        <div>
-          <input type="radio" /> Engineering Students
-        </div>
-        <div>
-          <input type="radio" /> Medical Students
-        </div>
-      </div>
-      <div>
-        <Input placeholder="Enter Your Email" />
-        <SmallButton>Subscribe</SmallButton>
-      </div>
-      <div />
-    </Subscription>
+    <SubscriptionComponent />
     <Subscription type="engineer">
       <Heading2>
         <h2>Testimonials</h2>
@@ -351,6 +337,8 @@ export {
   SubHeading,
   Grid,
   Card,
+  Input,
+  Subscription,
   MentorHeading,
   Home as default
 };

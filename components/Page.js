@@ -47,12 +47,6 @@ injectGlobal`
     font-style: normal;
   }
   @font-face {
-    font-family: 'Roboto';
-    src: url('/static/Roboto-Medium.ttf') format('ttf');
-    font-weight: normal;
-    font-style: normal;
-  }
-  @font-face {
     font-family: 'Futura';
     src: url('/static/futura.woff2') format('woff2');
     font-weight: normal;
@@ -76,7 +70,7 @@ injectGlobal`
     text-decoration: none;
     color: ${theme.black};
   }
-  button {  font-family: 'radnika_next'; }
+  button {  font-family: 'Rockwell'; }
 `;
 
 class Page extends Component {

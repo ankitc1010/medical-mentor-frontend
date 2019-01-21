@@ -326,9 +326,28 @@ const PricingGrid = styled.div`
   }
   .gold {
     background: #fff7ea;
+    border: 0;
     -webkit-box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.75);
+  }
+  .highlight {
+    font-size: 1.4rem;
+    border: 1px solid ${props => props.theme.black};
+    padding: 1rem;
+  }
+  .goldy {
+    border: 0;
+    -webkit-box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.75);
+    background: ${props => props.theme.primary};
+    color: ${props => props.theme.secondary};
+  }
+  .ultra-highlight {
+    font-size: 1.5rem;
+    padding: 1rem;
+    border: 1px solid ${props => props.theme.black};
   }
   > div {
     margin: 3rem 2rem;
@@ -662,6 +681,47 @@ class Medical extends Component {
                 <div>
                   <div>
                     <div>
+                      <img src={mp2} />
+                    </div>
+                    <div>
+                      <h5>Guidance from your Medical Mentor</h5>
+                      <p>
+                        <ul>
+                          <li>
+                            An intensive one-to-one session with your Medical
+                            Mentor, who will answer your queries about NEET
+                            Counselling
+                          </li>
+                          <li className="highlight">
+                            Mode of Delivery - Offline
+                          </li>
+                          <li className="ultra-highlight">Two Session</li>
+                        </ul>
+                      </p>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <img src={mp6} />
+                    </div>
+                    <div>
+                      <h5>Seminars and Workshops</h5>
+                      <p>
+                        <ul>
+                          <li>All about NEET Counselling</li>
+                          <li>Look beyond MBBS</li>
+                          <li>Study Medicine overseas</li>
+                          <li>Life in a medical college</li>
+                          <li className="highlight">
+                            Mode of Delivery - Offline
+                          </li>
+                          <li className="ultra-highlight">One Session</li>
+                        </ul>
+                      </p>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
                       <img src={c360} />
                     </div>
                     <div>
@@ -672,7 +732,9 @@ class Medical extends Component {
                             Access to all e-books + various tools including Prep
                             Test, Prep Meter, Rank Predictor, etc.
                           </li>
-                          <li>Mode of delivery - Online</li>
+                          <li className="highlight">
+                            Mode of delivery - Online
+                          </li>
                         </ul>
                       </p>
                     </div>
@@ -690,7 +752,9 @@ class Medical extends Component {
                             on preparation, cut-off, fees and admission process
                             through NEET
                           </li>
-                          <li>Mode of Delivery - Offline</li>
+                          <li className="highlight">
+                            Mode of Delivery - Offline
+                          </li>
                         </ul>
                       </p>
                     </div>
@@ -708,7 +772,9 @@ class Medical extends Component {
                             self-evaluation and comparative analysis with
                             toppers and other peers.
                           </li>
-                          <li>Mode of Delivery - Online</li>
+                          <li className="highlight">
+                            Mode of Delivery - Online
+                          </li>
                         </ul>
                       </p>
                     </div>
@@ -726,7 +792,9 @@ class Medical extends Component {
                             category. A personalized report designed to make
                             sure you get best option available.
                           </li>
-                          <li>Mode of Delivery - Offline and Email</li>
+                          <li className="highlight">
+                            Mode of Delivery - Offline and Email
+                          </li>
                         </ul>
                       </p>
                     </div>
@@ -744,7 +812,9 @@ class Medical extends Component {
                             AIQ/Deemed, ESI, AFMC, AIMS, JIPMER & different
                             state counsellings.
                           </li>
-                          <li>Mode of Delivery - Tele-support/ at MM Office</li>
+                          <li className="highlight">
+                            Mode of Delivery - Tele-support/ at MM Office
+                          </li>
                         </ul>
                       </p>
                     </div>
@@ -762,7 +832,9 @@ class Medical extends Component {
                             on preparation, cut-off, fees and admission process
                             through NEET
                           </li>
-                          <li>Mode of Delivery - Offline</li>
+                          <li className="highlight">
+                            Mode of Delivery - Offline
+                          </li>
                         </ul>
                       </p>
                     </div>
@@ -779,44 +851,9 @@ class Medical extends Component {
                             Regular SMS/Email alerts on announcements,
                             notifications, updates, counselling dates, etc.
                           </li>
-                          <li>Mode of Delivery - SMS and Email</li>
-                        </ul>
-                      </p>
-                    </div>
-                  </div>
-                  <div>
-                    <div>
-                      <img src={mp2} />
-                    </div>
-                    <div>
-                      <h5>Guidance from your Medical Mentor</h5>
-                      <p>
-                        <ul>
-                          <li>
-                            An intensive one-to-one session with your Medical
-                            Mentor, who will answer your queries about NEET
-                            Counselling
+                          <li className="highlight">
+                            Mode of Delivery - SMS and Email
                           </li>
-                          <li>Mode of Delivery - Offline</li>
-                          <li className="highlight">Two Session</li>
-                        </ul>
-                      </p>
-                    </div>
-                  </div>
-                  <div>
-                    <div>
-                      <img src={mp6} />
-                    </div>
-                    <div>
-                      <h5>Seminars and Workshops</h5>
-                      <p>
-                        <ul>
-                          <li>All about NEET Counselling</li>
-                          <li>Look beyond MBBS</li>
-                          <li>Study Medicine overseas</li>
-                          <li>Life in a medical college</li>
-                          <li>Mode of Delivery - Offline</li>
-                          <li className="highlight">One Session</li>
                         </ul>
                       </p>
                     </div>
@@ -832,7 +869,7 @@ class Medical extends Component {
                 <BuyNow id="cjr4nuh4o001j0874px5l9mkb" />
               </div>
               <div>
-                <h5>It includes everything in the silver pack +</h5>
+                <h5>It includes</h5>
                 <div>
                   <div>
                     <div>
@@ -847,8 +884,12 @@ class Medical extends Component {
                             Mentor, who will answer your queries about NEET
                             Counselling
                           </li>
-                          <li>Mode of Delivery - Offline</li>
-                          <li className="highlight">Five Sessions</li>
+                          <li className="highlight goldy">
+                            Mode of Delivery - Offline
+                          </li>
+                          <li className="ultra-highlight goldy">
+                            Five Sessions
+                          </li>
                         </ul>
                       </p>
                     </div>
@@ -865,8 +906,12 @@ class Medical extends Component {
                           <li>Look beyond MBBS</li>
                           <li>Study Medicine overseas</li>
                           <li>Life in a medical college</li>
-                          <li>Mode of Delivery - Offline</li>
-                          <li className="highlight">Four Sessions</li>
+                          <li className="highlight goldy">
+                            Mode of Delivery - Offline
+                          </li>
+                          <li className="ultra-highlight goldy">
+                            Four Sessions
+                          </li>
                         </ul>
                       </p>
                     </div>
@@ -885,7 +930,9 @@ class Medical extends Component {
                             and Other State Counselling
                           </li>
 
-                          <li>Mode of Delivery - MM Office</li>
+                          <li className="highlight goldy">
+                            Mode of Delivery - MM Office
+                          </li>
                         </ul>
                       </p>
                     </div>
@@ -904,7 +951,147 @@ class Medical extends Component {
                             the right format
                           </li>
 
-                          <li>Mode of Delivery - Offline and Email</li>
+                          <li className="highlight goldy">
+                            Mode of Delivery - Offline and Email
+                          </li>
+                        </ul>
+                      </p>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <img src={c360} />
+                    </div>
+                    <div>
+                      <h5>MBBS Componion by Career 360</h5>
+                      <p>
+                        <ul>
+                          <li>
+                            Access to all e-books + various tools including Prep
+                            Test, Prep Meter, Rank Predictor, etc.
+                          </li>
+                          <li className="highlight goldy">
+                            Mode of delivery - Online
+                          </li>
+                        </ul>
+                      </p>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <img src={mp2} />
+                    </div>
+                    <div>
+                      <h5>Medical Alamanac</h5>
+                      <p>
+                        <ul>
+                          <li>
+                            A comprehensive handbook which answers all questions
+                            on preparation, cut-off, fees and admission process
+                            through NEET
+                          </li>
+                          <li className="highlight goldy">
+                            Mode of Delivery - Offline
+                          </li>
+                        </ul>
+                      </p>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <img src={mp1} />
+                    </div>
+                    <div>
+                      <h5>Test Series</h5>
+                      <p>
+                        <ul>
+                          <li>
+                            This assessment platform helps you in
+                            self-evaluation and comparative analysis with
+                            toppers and other peers.
+                          </li>
+                          <li className="highlight goldy">
+                            Mode of Delivery - Online
+                          </li>
+                        </ul>
+                      </p>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <img src={mp3} />
+                    </div>
+                    <div>
+                      <h5>Shortlist your Success!</h5>
+                      <p>
+                        <ul>
+                          <li>
+                            Based on your inputs like NEET score/AIR/home state/
+                            category. A personalized report designed to make
+                            sure you get best option available.
+                          </li>
+                          <li className="highlight goldy">
+                            Mode of Delivery - Offline and Email
+                          </li>
+                        </ul>
+                      </p>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <img src={mp4} />
+                    </div>
+                    <div>
+                      <h5>Application Filling</h5>
+                      <p>
+                        <ul>
+                          <li>
+                            Support with filling of application forms for
+                            AIQ/Deemed, ESI, AFMC, AIMS, JIPMER & different
+                            state counsellings.
+                          </li>
+                          <li className="highlight goldy">
+                            Mode of Delivery - Tele-support/ at MM Office
+                          </li>
+                        </ul>
+                      </p>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <img src={mp5} />
+                    </div>
+                    <div>
+                      <h5>Medical Alamanac</h5>
+                      <p>
+                        <ul>
+                          <li>
+                            A comprehensive handbook which answers all questions
+                            on preparation, cut-off, fees and admission process
+                            through NEET
+                          </li>
+                          <li className="highlight goldy">
+                            Mode of Delivery - Offline
+                          </li>
+                        </ul>
+                      </p>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <img src={mp6} />
+                    </div>
+                    <div>
+                      <h5>News You Can Use</h5>
+                      <p>
+                        <ul>
+                          <li>
+                            Regular SMS/Email alerts on announcements,
+                            notifications, updates, counselling dates, etc.
+                          </li>
+                          <li className="highlight goldy">
+                            Mode of Delivery - SMS and Email
+                          </li>
                         </ul>
                       </p>
                     </div>
