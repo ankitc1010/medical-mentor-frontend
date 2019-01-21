@@ -29,9 +29,15 @@ const Body = styled.div`
   display: flex;
   max-width: 100rem;
   margin: 0 auto;
+  @media (max-width: 40rem) {
+    flex-direction: column;
+  }
   > div:first-child {
     background: ${props => props.theme.primary};
     min-height: 50rem;
+    @media (max-width: 40rem) {
+      min-height: 1rem;
+    }
     color: ${props => props.theme.white};
     ul {
       text-decoration: none;
@@ -82,6 +88,12 @@ const TestSection = styled.div`
     margin: 0;
     padding: 0;
   }
+  p {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
   a {
     padding: 1rem 4rem;
     padding-top: 1.4rem;
@@ -129,6 +141,7 @@ class Me extends Component {
                       {product.tests.length > 0 && (
                         <TestSection>
                           <h4>Tests you are elgibile for-</h4>
+                          <p>{`(Register on the link below and wait for us to give you access from the backend)`}</p>
                           {product.tests.map(test => (
                             <a href={test} target="_blank">
                               Link

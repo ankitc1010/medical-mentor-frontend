@@ -8,7 +8,6 @@ const SmallButton = styled.button`
   padding: 0.8rem 2rem;
   background: ${props =>
     props.type === "engineer" ? props.theme.primary : props.theme.secondary};
-  padding-top: 1.4rem;
   color: ${props =>
     props.type === "engineer" ? props.theme.white : props.theme.primary};
 `;

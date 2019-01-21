@@ -36,13 +36,13 @@ const Inner = styled.div`
 injectGlobal`
   @font-face {
     font-family: 'Rockwell';
-    src: url('/static/rock.ttf') format('ttf');
+    src: url('/static/rock.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
   }
   @font-face {
     font-family: 'Rockwell';
-    src: url('/static/rockb.ttf') format('ttf');
+    src: url('/static/rockb.woff2') format('woff2');
     font-weight: bold;
     font-style: normal;
   }
@@ -54,7 +54,7 @@ injectGlobal`
   }
   @font-face {
     font-family: 'Futura';
-    src: url('/static/futura.ttf') format('ttf');
+    src: url('/static/futura.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
   }
