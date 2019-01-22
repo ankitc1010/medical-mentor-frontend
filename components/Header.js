@@ -152,6 +152,14 @@ class Header extends Component {
     });
   };
 
+  componentDidMount() {
+    if (location.protocol != "https:") {
+      location.href =
+        "https:" +
+        window.location.href.substring(window.location.protocol.length);
+    }
+  }
+
   render() {
     const { open } = this.state;
     console.log(this.props);
