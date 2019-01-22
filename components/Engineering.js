@@ -301,6 +301,43 @@ const Engineering = () => (
             <div>
               <div>
                 <div>
+                  <img src={mp2} />
+                </div>
+                <div>
+                  <h5>Guidance from your Engineering Mentor</h5>
+                  <p>
+                    <ul>
+                      <li>
+                        An intensive one-to-one session with your Engineering
+                        Mentor, who will answer your queries and clarify your
+                        doubts.
+                      </li>
+                      <li className="highlight">Mode of Delivery - Offline</li>
+                      <li className="ultra-highlight">One Session</li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <img src={mp6} />
+                </div>
+                <div>
+                  <h5>Seminars and Workshops</h5>
+                  <p>
+                    <ul>
+                      <li>How to choose right College/Stream</li>
+                      <li>New age engineering careers</li>
+                      <li>Life at an engineering college</li>
+                      <li>Study Engineering Overseas</li>
+                      <li className="highlight">Mode of Delivery - Offline</li>
+                      <li className="ultra-highlight">One Session</li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+              <div>
+                <div>
                   <img src={c360} />
                 </div>
                 <div>
@@ -310,7 +347,7 @@ const Engineering = () => (
                       <li>
                         Access to all e-books, college predictor tools, etc.
                       </li>
-                      <li>Mode of delivery - Online</li>
+                      <li className="highlight">Mode of delivery - Online</li>
                     </ul>
                   </p>
                 </div>
@@ -328,7 +365,9 @@ const Engineering = () => (
                         forms. Get them right here and support with filling them
                         up too!
                       </li>
-                      <li>Mode of Delivery - Online + Offline</li>
+                      <li className="highlight">
+                        Mode of Delivery - Online + Offline
+                      </li>
                     </ul>
                   </p>
                 </div>
@@ -346,7 +385,7 @@ const Engineering = () => (
                         forms. Get them right here and support with filling them
                         up too!
                       </li>
-                      <li>Mode of Delivery - Online</li>
+                      <li className="highlight">Mode of Delivery - Online</li>
                     </ul>
                   </p>
                 </div>
@@ -363,7 +402,9 @@ const Engineering = () => (
                         Based on your inputs. A personalized report designed to
                         guide you on the options you should opt for.
                       </li>
-                      <li>Mode of Delivery - Offline and Email</li>
+                      <li className="highlight">
+                        Mode of Delivery - Offline and Email
+                      </li>
                     </ul>
                   </p>
                 </div>
@@ -380,45 +421,9 @@ const Engineering = () => (
                         Regular SMS/Email alerts on announcements,
                         notifications, updates, counselling dates, etc.
                       </li>
-                      <li>Mode of Delivery - SMS and Email</li>
-                    </ul>
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  <img src={mp2} />
-                </div>
-                <div>
-                  <h5>Guidance from your Engineering Mentor</h5>
-                  <p>
-                    <ul>
-                      <li>
-                        An intensive one-to-one session with your Engineering
-                        Mentor, who will answer your queries and clarify your
-                        doubts.
+                      <li className="highlight">
+                        Mode of Delivery - SMS and Email
                       </li>
-                      <li>Mode of Delivery - Offline</li>
-                      <li className="highlight">One Session</li>
-                    </ul>
-                  </p>
-                </div>
-              </div>
-              <div>
-                <div>
-                  <img src={mp6} />
-                </div>
-                <div>
-                  <h5>Seminars and Workshops</h5>
-                  <p>
-                    <ul>
-                      <li>How to choose right College/Stream</li>
-                      <li>New age engineering careers</li>
-                      <li>Life at an engineering college</li>
-                      <li>Study Engineering Overseas</li>
-                      <li>Mode of Delivery - Offline</li>
-                      <li className="highlight">One Session</li>
                     </ul>
                   </p>
                 </div>
@@ -448,8 +453,10 @@ const Engineering = () => (
                         An intensive one-to-one session with your Engineering
                         Mentor, who will answer your queries and clarify
                       </li>
-                      <li className="hightlight">Mode of Delivery - Offline</li>
-                      <li className="ultra-highlight">Three Sessions</li>
+                      <li className="highlight goldy">
+                        Mode of Delivery - Offline
+                      </li>
+                      <li className="ultra-highlight goldy">Three Sessions</li>
                     </ul>
                   </p>
                 </div>
@@ -466,8 +473,10 @@ const Engineering = () => (
                       <li>New age engineering careers</li>
                       <li>Life at an engineering college</li>
                       <li>Study Engineering Overseas</li>
-                      <li className="highlight">Mode of Delivery - Offline</li>
-                      <li className="ultra-highlight">Three Sessions</li>
+                      <li className="highlight goldy">
+                        Mode of Delivery - Offline
+                      </li>
+                      <li className="ultra-highlight goldy">Three Sessions</li>
                     </ul>
                   </p>
                 </div>
@@ -486,7 +495,9 @@ const Engineering = () => (
                         option available.
                       </li>
 
-                      <li>Mode of Delivery - Offline and Email</li>
+                      <li className="highlight goldy">
+                        Mode of Delivery - Offline and Email
+                      </li>
                     </ul>
                   </p>
                 </div>
@@ -505,7 +516,105 @@ const Engineering = () => (
                         college.
                       </li>
 
-                      <li>Mode of Delivery - All</li>
+                      <li className="highlight goldy">
+                        Mode of Delivery - All
+                      </li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <img src={c360} />
+                </div>
+                <div>
+                  <h5>B.Tech Companion by Career 360</h5>
+                  <p>
+                    <ul>
+                      <li>
+                        Access to all e-books, college predictor tools, etc.
+                      </li>
+                      <li className="highlight goldy">
+                        Mode of delivery - Online
+                      </li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <img src={mp2} />
+                </div>
+                <div>
+                  <h5>Application Filling</h5>
+                  <p>
+                    <ul>
+                      <li>
+                        Why run around to multiple institutions for application
+                        forms. Get them right here and support with filling them
+                        up too!
+                      </li>
+                      <li className="highlight goldy">
+                        Mode of Delivery - Online + Offline
+                      </li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <img src={mp1} />
+                </div>
+                <div>
+                  <h5>Psychometric Test</h5>
+                  <p>
+                    <ul>
+                      <li>
+                        Why run around to multiple institutions for application
+                        forms. Get them right here and support with filling them
+                        up too!
+                      </li>
+                      <li className="highlight goldy">
+                        Mode of Delivery - Online
+                      </li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <img src={mp3} />
+                </div>
+                <div>
+                  <h5>Shortlist your Success!</h5>
+                  <p>
+                    <ul>
+                      <li>
+                        Based on your inputs. A personalized report designed to
+                        guide you on the options you should opt for.
+                      </li>
+                      <li className="highlight goldy">
+                        Mode of Delivery - Offline and Email
+                      </li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <img src={mp4} />
+                </div>
+                <div>
+                  <h5>News You Can Use</h5>
+                  <p>
+                    <ul>
+                      <li>
+                        Regular SMS/Email alerts on announcements,
+                        notifications, updates, counselling dates, etc.
+                      </li>
+                      <li className="highlight goldy">
+                        Mode of Delivery - SMS and Email
+                      </li>
                     </ul>
                   </p>
                 </div>

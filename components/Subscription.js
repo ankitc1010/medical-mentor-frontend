@@ -69,10 +69,6 @@ class SubscriptionComponent extends Component {
       <Mutation mutation={CREATE_SUBSCRIPTION_MUTATION}>
         {(createSubscription, { loading, error }) => (
           <Subscription>
-            <Head>
-              <script src="https://www.google.com/recaptcha/api.js" />
-            </Head>
-
             <h2>Subscribe to our Newsletter</h2>
             <div>
               <div>

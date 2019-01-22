@@ -201,7 +201,7 @@ const Footer = () => (
           <FaYoutube />
         </a>
       </Socials>
-      <div>&#174; 2019 Career Shapers, Inc</div>
+      <div>&#174; 2019 Exzellenz Career Shapers Pvt Ltd</div>
     </div>
   </FooterSection>
 );

@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import Link from "next/link";
+import Head from "next/head";
 import styled from "styled-components";
 import NProgress from "nprogress";
 import Router from "next/router";
@@ -144,10 +145,21 @@ class Header extends Component {
       open: !open
     });
   };
+
+  componentWillMount() {
+    if (process.env.NODE_ENV !== "development") {
+      if (location.protocol !== "https:") {
+        location.protocol = "https:";
+      }
+    }
+  }
   render() {
     const { open } = this.state;
     return (
       <NavWrapper>
+        <Head>
+          <script src="https://www.google.com/recaptcha/api.js" />
+        </Head>
         <div>
           <div className="nav">
             <div className="nav-header">
@@ -175,6 +187,9 @@ class Header extends Component {
 
               <Link href="/about" prefetch>
                 <a onClick={this.handleToggle}>About Us</a>
+              </Link>
+              <Link href="/contact" prefetch>
+                <a onClick={this.handleToggle}>Contact Us</a>
               </Link>
               <User>
                 {me =>
