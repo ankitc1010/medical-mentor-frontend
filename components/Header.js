@@ -164,7 +164,6 @@ class Header extends Component {
 
   render() {
     const { open } = this.state;
-    console.log(this.props);
     return (
       <NavWrapper>
         <Head>
@@ -196,49 +195,6 @@ class Header extends Component {
                   Medical Mentor
                 </Anchor>
               </Link>
-              <Link href="/engineering" prefetch>
-                <Anchor
-                  onClick={this.handleToggle}
-                  active={"/engineering" === this.props.route}
-                >
-                  Engineering Mentor
-                </Anchor>
-              </Link>
-
-              <Link href="/about" prefetch>
-                <Anchor
-                  onClick={this.handleToggle}
-                  active={"/about" === this.props.route}
-                >
-                  About Us
-                </Anchor>
-              </Link>
-              <Link href="/contact" prefetch>
-                <Anchor
-                  onClick={this.handleToggle}
-                  active={"/contact" === this.props.route}
-                >
-                  Contact Us
-                </Anchor>
-              </Link>
-              <User>
-                {me =>
-                  me.data.me ? (
-                    <Fragment>
-                      <SignOut />
-                      <Link href="/me" prefetch>
-                        <SmallButton onClick={this.handleToggle}>
-                          Profile
-                        </SmallButton>
-                      </Link>
-                    </Fragment>
-                  ) : (
-                    <a onClick={() => (location.hash = "signin-popup")}>
-                      <SmallButton>Register/Sign In</SmallButton>
-                    </a>
-                  )
-                }
-              </User>
             </div>
           </div>
         </div>

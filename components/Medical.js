@@ -674,7 +674,9 @@ class Medical extends Component {
                 <div>SILVER</div>
                 <h4>&#8377;15,980/-</h4>
                 <div>One time payment</div>
-                <BuyNow id="cjr1529ag000d0809pudrlp0q" />
+                <a href="https://www.mycareershapers.in/checkout?id=cjr1529ag000d0809pudrlp0q#signin-popup">
+                  Buy Now
+                </a>
               </div>
               <div>
                 <h5>It includes</h5>
@@ -866,7 +868,9 @@ class Medical extends Component {
                 <div>GOLD</div>
                 <h4>&#8377;24,980/-</h4>
                 <div>One time payment</div>
-                <BuyNow id="cjr4nuh4o001j0874px5l9mkb" />
+                <a href="https://www.mycareershapers.in/checkout?id=cjr4nuh4o001j0874px5l9mkb#signin-popup">
+                  Buy Now
+                </a>
               </div>
               <div>
                 <h5>It includes</h5>

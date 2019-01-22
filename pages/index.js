@@ -1,15 +1,16 @@
 import Head from "next/head";
 
-import Home from "../components/Home";
+import Medical from "../components/Medical";
+
 import Footer from "../components/Footer";
 
 const HomePage = props => (
   <div>
     <Head>
-      <title>Career Shapers</title>
+      <title>Medical Mentor</title>
       <meta type="description" value="Demo" />
     </Head>
-    <Home />
+    <Medical />
   </div>
 );
 
