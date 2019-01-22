@@ -153,10 +153,12 @@ class Header extends Component {
   };
 
   componentDidMount() {
-    if (location.protocol != "https:") {
-      location.href =
-        "https:" +
-        window.location.href.substring(window.location.protocol.length);
+    if (process.env.NODE_ENV !== "development") {
+      if (location.protocol != "https:") {
+        location.href =
+          "https:" +
+          window.location.href.substring(window.location.protocol.length);
+      }
     }
   }
 
