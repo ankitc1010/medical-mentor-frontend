@@ -152,13 +152,6 @@ class Header extends Component {
     });
   };
 
-  componentWillMount() {
-    if (process.env.NODE_ENV !== "development") {
-      if (location.protocol !== "https:") {
-        location.protocol = "https:";
-      }
-    }
-  }
   render() {
     const { open } = this.state;
     console.log(this.props);
