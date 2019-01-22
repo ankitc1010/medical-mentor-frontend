@@ -124,6 +124,12 @@ const NavWrapper = styled.div`
   }
 `;
 
+const Anchor = styled.a`
+  background-color: ${props =>
+    props.active ? props.theme.primary : "inherit"};
+  color: ${props => (props.active ? props.theme.secondary : "inherit")};
+`;
+
 Router.onRouteChangeStart = () => {
   NProgress.start();
 };
@@ -155,6 +161,7 @@ class Header extends Component {
   }
   render() {
     const { open } = this.state;
+    console.log(this.props);
     return (
       <NavWrapper>
         <Head>
@@ -179,17 +186,37 @@ class Header extends Component {
             <input type="checkbox" id="nav-check" checked={open} />
             <div className="nav-links">
               <Link href="/medical" prefetch>
-                <a onClick={this.handleToggle}>Medical Mentor</a>
+                <Anchor
+                  onClick={this.handleToggle}
+                  active={"/medical" === this.props.route}
+                >
+                  Medical Mentor
+                </Anchor>
               </Link>
               <Link href="/engineering" prefetch>
-                <a onClick={this.handleToggle}>Engineering Mentor</a>
+                <Anchor
+                  onClick={this.handleToggle}
+                  active={"/engineering" === this.props.route}
+                >
+                  Engineering Mentor
+                </Anchor>
               </Link>
 
               <Link href="/about" prefetch>
-                <a onClick={this.handleToggle}>About Us</a>
+                <Anchor
+                  onClick={this.handleToggle}
+                  active={"/about" === this.props.route}
+                >
+                  About Us
+                </Anchor>
               </Link>
               <Link href="/contact" prefetch>
-                <a onClick={this.handleToggle}>Contact Us</a>
+                <Anchor
+                  onClick={this.handleToggle}
+                  active={"/contact" === this.props.route}
+                >
+                  Contact Us
+                </Anchor>
               </Link>
               <User>
                 {me =>
